@@ -131,7 +131,16 @@
   .pub .links-row{font-size:15px;font-weight:600;margin:0;}
   .pub .links-row a{margin-right:20px;}
   .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;
-    background:#e7f6ec;color:#1a7f43;border-radius:6px;padding:2px 8px;margin-left:6px;vertical-align:middle;}
+    background:var(--accent-soft);color:var(--accent);border-radius:6px;padding:2px 8px;margin-left:6px;vertical-align:middle;}
+
+  /* news */
+  .news{list-style:none;padding:0;margin:0;}
+  .news li{display:flex;gap:18px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;align-items:baseline;}
+  .news li:last-child{border-bottom:none;}
+  .news .news-date{flex:none;width:96px;color:var(--accent);font-weight:600;font-size:14px;}
+  .news .news-text{color:#374151;}
+  .news .news-text b{color:var(--ink);}
+  @media(max-width:560px){.news li{flex-direction:column;gap:2px;}}
   @media(max-width:560px){.pub{flex-direction:column;gap:16px;}.pub .fig img{width:100%;height:auto;}}
 
   /* timeline / list items */
@@ -159,6 +168,7 @@
     <span class="brand">Sen Chen (陈森)</span>
     <span class="links">
       <a href="#about">About</a>
+      <a href="#news">News</a>
       <a href="#education">Education</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
@@ -208,6 +218,24 @@
         During my undergraduate studies, I worked on the <b>robustness of GUI agents</b>.</p>
       </section>
 
+      <section id="news">
+        <h2>News</h2>
+        <ul class="news">
+          <li>
+            <span class="news-date">Nov 2025</span>
+            <span class="news-text">Our paper <b>D-GARA</b> was accepted to <b>AAAI 2026</b> as a Poster.</span>
+          </li>
+          <li>
+            <span class="news-date">Jun 2026</span>
+            <span class="news-text">Received my <b>B.Eng.</b> degree from Tongji University.</span>
+          </li>
+          <li>
+            <span class="news-date">Sep 2026</span>
+            <span class="news-text">Starting my <b>Ph.D.</b> at Tongji University.</span>
+          </li>
+        </ul>
+      </section>
+
       <section id="education">
         <h2>Education</h2>
         <div class="item">
@@ -248,7 +276,7 @@
           </a>
           <div class="body">
             <p class="ttl"><a href="https://sen0609.github.io/D-GARA/" target="_blank" rel="noopener">D-GARA: A Dynamic Benchmarking Framework for GUI Agent Robustness in
-              Real-World Anomalies</a> <span class="badge">ACCEPTED</span></p>
+              Real-World Anomalies</a> <span class="badge">Poster</span></p>
             <p class="auth"><b>Sen Chen</b>, Tong Zhao, Yi Bin, Fei Ma, Wenqi Shao, Zheng Wang</p>
             <p class="venue-line">AAAI Conference on Artificial Intelligence (AAAI), 2026</p>
             <p class="highlight">A dynamic benchmarking framework that evaluates GUI-agent robustness under real-world Android anomalies.</p>
