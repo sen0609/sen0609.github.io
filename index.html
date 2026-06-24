@@ -115,8 +115,8 @@
 
   /* publication card */
   .pub{display:flex;gap:30px;align-items:flex-start;}
-  .pub .fig{flex:none;width:520px;position:relative;display:block;text-decoration:none;}
-  .pub .fig img{width:100%;border:1px solid var(--line);border-radius:8px;display:block;background:#fff;}
+  .pub .fig{flex:none;position:relative;display:block;text-decoration:none;}
+  .pub .fig img{height:215px;width:auto;border:1px solid var(--line);border-radius:8px;display:block;background:#fff;}
   .pub .fig .fig-tag{position:absolute;top:12px;left:12px;background:var(--accent);color:#fff;
     font-weight:700;font-size:12.5px;letter-spacing:.3px;border-radius:6px;padding:4px 11px;
     box-shadow:0 2px 6px rgba(0,0,0,.18);}
@@ -130,15 +130,9 @@
   .pub .body .highlight::before{content:"•";position:absolute;left:3px;color:var(--accent);font-weight:700;}
   .pub .links-row{font-size:15px;font-weight:600;margin:0;}
   .pub .links-row a{margin-right:20px;}
-  .pub details.abstract{margin-top:14px;border-top:1px solid var(--line);padding-top:12px;}
-  .pub details.abstract summary{cursor:pointer;font-size:13.5px;font-weight:600;color:var(--accent);list-style:none;}
-  .pub details.abstract summary::-webkit-details-marker{display:none;}
-  .pub details.abstract summary::before{content:"\25B8\00a0";}
-  .pub details.abstract[open] summary::before{content:"\25BE\00a0";}
-  .pub details.abstract .ab-text{font-size:14px;color:#374151;line-height:1.6;text-align:justify;margin-top:9px;}
   .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;
     background:#e7f6ec;color:#1a7f43;border-radius:6px;padding:2px 8px;margin-left:6px;vertical-align:middle;}
-  @media(max-width:560px){.pub{flex-direction:column;gap:16px;}.pub .fig{width:100%;}}
+  @media(max-width:560px){.pub{flex-direction:column;gap:16px;}.pub .fig img{width:100%;height:auto;}}
 
   /* timeline / list items */
   .item{padding:0 0 18px 0;border-bottom:1px solid var(--line);margin-bottom:18px;}
@@ -262,27 +256,6 @@
               <a href="https://sen0609.github.io/D-GARA/" target="_blank" rel="noopener">Project Page</a>
               <a href="https://arxiv.org/pdf/2511.16590" target="_blank" rel="noopener">Paper</a>
             </p>
-            <details class="abstract">
-            <summary>Abstract</summary>
-            <div class="ab-text">
-            Developing intelligent agents capable of operating a wide range of Graphical User
-            Interfaces (GUIs) with human-level proficiency is a key milestone on the path toward
-            Artificial General Intelligence. While most existing datasets and benchmarks for training
-            and evaluating GUI agents are static and idealized, failing to reflect the complexity and
-            unpredictability of real-world environments, particularly the presence of anomalies. To
-            bridge this research gap, we propose D-GARA, a dynamic benchmarking framework, to evaluate
-            Android GUI agent robustness in real-world anomalies. D-GARA introduces a diverse set of
-            real-world anomalies that GUI agents commonly face in practice, including interruptions
-            such as permission dialogs, battery warnings, and update prompts. Based on D-GARA
-            framework, we construct and annotate a benchmark featuring commonly used Android
-            applications with embedded anomalies to support broader community research. Comprehensive
-            experiments and results demonstrate substantial performance degradation in
-            state-of-the-art GUI agents when exposed to anomaly-rich environments, highlighting the
-            need for robustness-aware learning. D-GARA is modular and extensible, supporting the
-            seamless integration of new tasks, anomaly types, and interaction scenarios to meet
-            specific evaluation goals.
-            </div>
-            </details>
           </div>
         </div>
       </section>
